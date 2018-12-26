@@ -1,3 +1,7 @@
-import EnvironmentConfig from './config/config';
+import { Server } from './server/server';
 
-EnvironmentConfig.initializeEnvironment();
+Server.bootstrap().initialize().then((serverInstance: Server) => {
+  console.log(`Server running successfully on ${process.env['BASE_URL']}`);
+}).catch((error: any) => {
+  console.log(error);
+});

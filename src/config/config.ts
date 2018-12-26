@@ -21,14 +21,13 @@ export class EnvironmentConfig {
   }
 
   /**
-   **sets the path of the needed 
-   **environment (.env) file
+   ** sets the path of the needed 
+   ** environment (.env) file
    *
    * @memberof EnvironmentConfig
    */
 
   public initializeEnvironment(): void {
-
     switch (this.environment) {
       case "test":
         this.path = `${__dirname}/../env/.env`;
@@ -40,8 +39,6 @@ export class EnvironmentConfig {
         this.path = `${__dirname}/../env/.env.development`;
     }
     dotenv.config({ path: this.path });
-    console.log(this.path);
-    console.log(process.env['BASE_URL']);
   }
 }
 
