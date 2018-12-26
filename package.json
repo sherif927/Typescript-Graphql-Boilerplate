@@ -4,6 +4,22 @@
   "description": "Graphql node server boilerplate",
   "author": "Sherif Amr",
   "license": "ISC",
+  "dependencies": {
+    "@gql2ts/from-schema": "^1.10.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^6.2.0",
+    "graphql-import": "^0.7.1",
+    "graphql-middleware": "^3.0.0",
+    "graphql-tools": "^4.0.3",
+    "graphql-yoga": "^1.16.7",
+    "inversify": "^5.0.1",
+    "jsonwebtoken": "^8.4.0",
+    "mailgun-js": "^0.22.0",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.3.15",
+    "reflect-metadata": "^0.1.10",
+    "uuid": "^3.3.2"
+  },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/dotenv": "^6.1.0",
@@ -13,30 +29,13 @@
     "@types/mongoose": "^5.3.4",
     "@types/node": "^10.12.15",
     "@types/uuid": "^3.4.4",
-    "@types/yup": "^0.26.3",
     "gql2ts": "^1.10.1",
     "nodemon": "^1.17.3",
     "ts-node": "7.0.1",
     "typescript": "3.2.2"
   },
-  "dependencies": {
-    "@gql2ts/from-schema": "^1.10.1",
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^6.2.0",
-    "graphql-import": "^0.7.1",
-    "graphql-middleware": "^3.0.0",
-    "graphql-tools": "^4.0.3",
-    "graphql-yoga": "^1.16.7",
-    "jsonwebtoken": "^8.4.0",
-    "mailgun-js": "^0.22.0",
-    "mongodb": "^3.1.10",
-    "mongoose": "^5.3.15",
-    "reflect-metadata": "^0.1.10",
-    "uuid": "^3.3.2",
-    "yup": "^0.26.6"
-  },
   "scripts": {
     "start": "nodemon --exec ts-node src/index.ts",
-    "generate-schemas": "ts-node ./src/scripts/createTypes.ts"
+    "generate-schema": "ts-node ./src/scripts/createTypes.ts"
   }
 }

@@ -32,10 +32,10 @@ class MongoDb {
 
     try {
       await Mongoose.connect(uri, options);
-      let message = `MongoDB Client connected successfully to URL:${uri}`;
+      let message = `MongoDB Client connected successfully to URL:${uri} ✅`;
       console.log(message);
     } catch (error) {
-      let message = "Error connecting to the DB, Maybe it's not running?";
+      let message = "Error connecting to the DB, Maybe it's not running? 🤨";
       console.error(message);
       process.exit(1);
     }
