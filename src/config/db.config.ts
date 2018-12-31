@@ -23,7 +23,7 @@ class MongoDb {
     const dbPort = process.env['DB_PORT'] || 27017;
     const uri = `mongodb://${dbAddress}:${dbPort}/${dbName}`;
 
-    const options: Mongoose.ConnectionOptions = { useNewUrlParser: true };
+    const options: Mongoose.ConnectionOptions = { useNewUrlParser: true, useCreateIndex: true };
 
     if (process.env['DB_AUTH'] === "true") {
       options["user"] = process.env.DB_USER;

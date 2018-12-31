@@ -1,6 +1,6 @@
 import { ResolverMap } from "../../types/graphql.utils";
 import { GQL } from "../../types/schema";
-import * as Bcrypt from 'bcryptjs';
+import UserService from "../../services/UserService";
 
 export const resolvers: ResolverMap = {
   Query: {
@@ -8,7 +8,8 @@ export const resolvers: ResolverMap = {
   },
   Mutation: {
     login: async (_, { email, password }: GQL.ILoginOnMutationArguments) => {
-      return null;
+      const result = await UserService.login(email, password);
+      return result;
     }
   }
 };

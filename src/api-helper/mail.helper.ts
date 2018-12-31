@@ -27,7 +27,7 @@ class MailHelper {
    * @memberof MailHelper
    */
 
-  public async createConfirmEmailLink(url: string, userId: string) {
+  public async createConfirmEmailLink(url: string, userId?: string) {
     const id: string = v4();
     //TODO implement confirmationRequest
     return `${url}/confirm/${id}`;
